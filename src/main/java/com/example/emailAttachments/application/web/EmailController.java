@@ -1,7 +1,7 @@
-package com.example.emailAttachments.adapter.web;
+package com.example.emailAttachments.application.web;
 
-import com.example.emailAttachments.domain.model.EmailRequest;
-import com.example.emailAttachments.port.in.SendEmailUseCase;
+import com.example.emailAttachments.application.EmailRequest;
+import com.example.emailAttachments.application.port.in.SendEmail;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("v1/email")
 public class EmailController {
 
-    private final SendEmailUseCase sendEmailUseCase;
+    private final SendEmail sendEmailUseCase;
 
-    public EmailController(SendEmailUseCase sendEmailUseCase) {
+    public EmailController(SendEmail sendEmailUseCase) {
         this.sendEmailUseCase = sendEmailUseCase;
     }
 

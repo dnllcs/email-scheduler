@@ -25,7 +25,6 @@ public class EmailControllerIT {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
-
     @RegisterExtension
     static GreenMailExtension greenMail = new GreenMailExtension(ServerSetupTest.SMTP)
             .withConfiguration(GreenMailConfiguration.aConfig().withUser("springTest", "springTest"))

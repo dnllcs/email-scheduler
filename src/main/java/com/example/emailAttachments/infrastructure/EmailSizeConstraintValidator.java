@@ -1,4 +1,4 @@
-package com.example.emailAttachments.domain.model;
+package com.example.emailAttachments.infrastructure;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
@@ -14,7 +14,7 @@ public class EmailSizeConstraintValidator {
     private static final long MAX_MESSAGE_SIZE_KB = 20 * 1024;
     private static final long MAX_BODY_SIZE_KB = 100;
 
-    static Logger log = LoggerFactory.getLogger(EmailAttachmentUtils.class);
+    static Logger log = LoggerFactory.getLogger(EmailSizeConstraintValidator.class);
 
     public static void validateAttachmentSize(byte[] attachment) {
         log.info("attachment size: {}KB", attachment.length / 1024);

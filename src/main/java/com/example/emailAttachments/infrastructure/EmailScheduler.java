@@ -1,7 +1,7 @@
 package com.example.emailAttachments.infrastructure;
 
-import com.example.emailAttachments.domain.model.EmailRequest;
-import com.example.emailAttachments.port.in.SendEmailUseCase;
+import com.example.emailAttachments.application.EmailRequest;
+import com.example.emailAttachments.application.port.in.SendEmail;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 public class EmailScheduler {
 
-    private final SendEmailUseCase emailService;
+    private final SendEmail emailService;
     Logger log = LoggerFactory.getLogger(EmailScheduler.class);
     @Value("${scheduled.email.recipient}")
     private String recipient;

@@ -1,4 +1,4 @@
-package com.example.emailAttachments.configuration;
+package com.example.emailAttachments.infrastructure.configuration;
 
 import com.example.emailAttachments.EmailAttachmentsApplication;
 import com.example.emailAttachments.domain.service.EmailService;
